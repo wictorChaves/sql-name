@@ -14,11 +14,11 @@ function generateName() {
     var today = new Date();
 
     if (date.length == 0) {
-        date = today.getFullYear() + '' + (today.getMonth() + 1) + '' + today.getDate();
+        date = today.getFullYear() + '' + (today.getMonth() + 1).toString().padStart(2, '0') + '' + today.getDate().toString().padStart(2, '0');
     }
 
     if (time.length == 0) {
-        time = today.getHours() + '' + today.getMinutes();
+        time = today.getHours().padStart(2, '0') + '' + today.getMinutes().padStart(2, '0');
     }
 
     var name          = `V${date}.${time}__${description}.sql`;
