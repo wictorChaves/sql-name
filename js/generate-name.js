@@ -18,7 +18,7 @@ function generateName() {
     }
 
     if (time.length == 0) {
-        time = today.getHours().padStart(2, '0') + '' + today.getMinutes().padStart(2, '0');
+        time = today.getHours().toString().padStart(2, '0') + '' + today.getMinutes().toString().padStart(2, '0');
     }
 
     var name          = `V${date}.${time}__${description}.sql`;
