@@ -38,10 +38,6 @@ function copyToClipboard(element) {
 
 $(function () {
 
-    $('#btn-generate').click(function () {
-        generateName();
-    });
-
     $('#description').keyup(function () {
         generateName();
     });
